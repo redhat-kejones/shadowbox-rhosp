@@ -110,9 +110,9 @@ resources:
                   next_hop: {get_param: ControlPlaneDefaultRoute}
               members:
                 -
-                  type: ovs_bond
+                  type: linux_bond
                   name: bond-prov
-                  ovs_options: {get_param: BondInterfaceOvsOptions}
+                  bonding_options: {get_param: BondInterfaceOvsOptions}
                   members:
                     -
                       type: interface

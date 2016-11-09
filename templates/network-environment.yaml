@@ -39,8 +39,9 @@ parameter_defaults:
   TenantNetworkVlanID: 903
   StorageNetworkVlanID: 901
   StorageMgmtNetworkVlanID: 902
-  #ExternalNetworkVlanID: 904
+  ExternalNetworkVlanID: 904
   # Set to empty string to enable multiple external networks or VLANs
   NeutronExternalNetworkBridge: "''"
   # Customize bonding options, e.g. "mode=4 lacp_rate=1 updelay=1000 miimon=100"
-  BondInterfaceOvsOptions: "bond_mode=balance-slb"
+  #BondInterfaceOvsOptions: "bond_mode=balance-slb"
+  BondInterfaceOvsOptions: "mode=4 lacp_rate=1 updelay=1000 miimon=100
